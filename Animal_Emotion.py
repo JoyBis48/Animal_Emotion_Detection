@@ -14,9 +14,8 @@ warnings.filterwarnings("ignore")
 
 # Loading the model 
 base_dir = os.getcwd()
-model_path_dir = os.path.join(base_dir, 'saved_model')
 
-loaded_model = load_model(model_path_dir)
+loaded_model = load_model('test.keras')
 
 # Printing the model summary
 loaded_model.summary()
