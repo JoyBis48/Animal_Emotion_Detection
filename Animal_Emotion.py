@@ -53,7 +53,8 @@ def detect_emotion(file_path):
         pred = emotions_list[np.argmax(loaded_model.predict(processed_image))]
         # Updating label with predicted emotion
         emotion_label.config(text="The Predicted Emotion is --> " + pred)
-    except:
+    except Exception as e:
+        print(e)
         # If unable to detect, update label accordingly
         emotion_label.config(text="Unable to detect emotion")
 
